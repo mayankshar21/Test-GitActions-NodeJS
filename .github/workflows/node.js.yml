@@ -3,7 +3,7 @@ name: Build & pull request
 
 on:
   push:
-    branches: [development-server]
+    branches: [development]
 
 jobs:  
   build:
@@ -17,16 +17,16 @@ jobs:
 
 
 
-  staging-pull-request:
+  testing-pull-request:
     runs-on: ubuntu-latest
-    name: staging-pull-request
+    name: testing-pull-request
     steps:
     - name: checkout
       uses: actions/checkout@v1
     - name: Create PR to branch
       uses: gorillio/github-action-cherry-pick@master
       with:
-        pr_branch: staging-server
+        pr_branch: testing
       env:
         BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
         DRY_RUN: false
