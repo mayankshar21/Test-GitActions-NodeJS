@@ -1,8 +1,5 @@
 name: build
-on:
-  push:
-    paths: 
-      - '**.js'
+on: push
 jobs:
   build:
     name: my job
