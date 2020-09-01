@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node }}
           registry-url: https://npm.pkg.github.com/ # if your publishing your package to npm or github package repo
       - name: my fourth step
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
       - name: my fifth step
         uses: actions/first-interaction@v1
         with:
