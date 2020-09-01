@@ -19,12 +19,12 @@ jobs:
         if: success()
         run: echo "The previous step has finished successfully"
       - name: my third step
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           node-version: ${{ matrix.node }}
-          registry-url: https://npm.pkg.github.com/ # if your publishing your package to npm or github package repo
+          registry-url: https://npm.pkg.github.com/
       - name: my fourth step
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
       - name: my fifth step
         uses: actions/first-interaction@v1
         with:
