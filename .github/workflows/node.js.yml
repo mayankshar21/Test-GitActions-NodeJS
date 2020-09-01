@@ -1,5 +1,5 @@
 name: build
-on: pull_request
+on: pull_request #changed this
 jobs:
   build:
     name: my job
